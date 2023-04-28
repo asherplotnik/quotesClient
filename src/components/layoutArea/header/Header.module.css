@@ -12,9 +12,33 @@
 }
 
 .HeaderItem {
+    font-family: 'Courgette', cursive;
+    font-size: larger;
     padding: 0px 20px 0px 20px;
     cursor: pointer;
 }
+
+.HeaderLogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 1vh;
+    cursor: pointer;
+}
+
+.HeaderLogo img{
+    max-height: 5vh;
+}
+
+.HeaderLogo p {
+    font-family: 'Courgette', cursive;
+    font-size: larger;
+    margin-top: 1vh;
+    margin-left: 0.2vh;
+}
+
 
 
 

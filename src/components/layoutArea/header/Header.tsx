@@ -3,11 +3,11 @@ import store from "../../../Redux/Store";
 import { removeSessionAction } from "../../../Redux/SessionState"
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import logo from "../../../assets/images/logo.jpg"
 function Header(): JSX.Element {
   const [name, setName] = useState(store.getState().SessionState.session.name);
   const navigate = useNavigate();
   useEffect(() => {
-   // validateTokenExpiration();
     const unsubscribeMe = store.subscribe(() => {
       setName(store.getState().SessionState.session.name);
     });
@@ -31,33 +31,33 @@ function Header(): JSX.Element {
     }
   };
 
-//   const validateTokenExpiration = () => {
-//     const token = store.getState().SessionState.session.token;
-//   }
-
   const handleLogout = () => {
     store.dispatch(removeSessionAction());
     navigate("/today");
   }
 
   return (
-    <div className={classes.Header}>
+    
+    <div className={classes.Header}>  
+      <div className={classes.HeaderLogo} onClick={() => navigateTo(0)}>
+        <img src={logo} alt="logo"/><p>One pearl a day</p>
+      </div>
       <div className={classes.HeaderItem} onClick={() => navigateTo(0)}>
-        Today's Quote
+        Today's quote
       </div>
       {name && (
         <div className={classes.HeaderItem} onClick={() => navigateTo(1)}>
-          My Favorite Quotes
+          My favorite quotes
         </div>
       )}
       {!name && (
         <div className={classes.HeaderItem} onClick={() => navigateTo(2)}>
-          Login for more features...
+          login for more features...
         </div>
       )}
       {name && (
         <div className={classes.HeaderItem} onClick={() => handleLogout()}>
-          Logout
+          logout
         </div>
       )}
     </div>
