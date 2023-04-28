@@ -1,0 +1,12 @@
+.RatingComponent {
+    cursor: pointer;
+    padding-top: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.RatingComponent img{
+    height: 4vh;
+    padding: 2px;
+}

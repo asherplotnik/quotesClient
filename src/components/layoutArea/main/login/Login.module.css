@@ -1,0 +1,109 @@
+.Login {
+    padding: 20px;
+    grid-row: 2;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    vertical-align: middle;
+}
+
+/* Form container */
+.LoginFormContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+  }
+  
+  /* Form fields */
+  .FormField {
+    margin-bottom: 15px;
+    list-style: none;
+  }
+  
+  .FormField label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .FormField input[type="text"],
+  .FormField input[type="email"],
+  .FormField input[type="password"]
+  {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Form buttons */
+  .FormBtn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .BtnSignUp {
+    display: block;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5px;;
+    transition: background-color 0.3s ease;
+  }
+
+  .FormBtn:hover {
+    background-color: #218838;
+  }
+
+  .BtnSignUp:hover {
+    background-color:#0059cd
+  }
+  
+  /* Form messages */
+  .FormMessage {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .FormMessage.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .FormMessage.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  @media (min-width: 851px) {
+    .BtnSignUp {
+        width: 10%;
+    }
+  }
+
+  @media (max-width: 850px) {
+    .BtnSignUp {
+        width: 50%;
+
+  }
+}

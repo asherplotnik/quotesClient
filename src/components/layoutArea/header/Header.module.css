@@ -1,0 +1,20 @@
+.Header {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: black;
+    padding: 20px;
+    grid-row: 1;
+    grid-column: 1;
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.HeaderItem {
+    padding: 0px 20px 0px 20px;
+    cursor: pointer;
+}
+
+
+
